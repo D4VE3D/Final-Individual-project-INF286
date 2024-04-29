@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Ndagiro Personal Websites </title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #007bff; /* Blue */
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav button {
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            background-color: #007bff;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Section Styles */
+        section {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form Styles */
+        form div {
+            margin-bottom: 10px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>David Ndagiro Personal Website</h1>
+    </div>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('education')">Education</button>
+    <button onclick="showSection('hobbies')">Hobbies</button>
+    <button onclick="showSection('contact')">Contact Me</button>
+</nav>
+
+<section id="home">
+    <h2>Welcome</h2>
+    <p>Welcome to David Ndagiro Personal website This a glimpse into my journey through education, hobbies, and adventures around the world.</p>
+</section>
+
+<section id="education" style="display: none;">
+    <h2>Education</h2>
+    <p>My educational journey began in Africa, specifically in Burundi, where I laid the foundation for my future. Transitioning to Albany, NY, I attended Myers Middle School before moving on to Albany High School. Here, I became a mentor in President Obama's My Brother's Keeper initiative, shaping my commitment to supporting youth.</p>
+    <p>After relocating to KY, I pursued Business with an IT focus at Campbellsville University, later transferring to Northern Kentucky University. Currently studying Information Technology, I anticipate graduating in Dec 2025. This journey underscores my dedication to education, community involvement, and my passion for leveraging technology for positive change.</p>
+</section>
+
+<section id="hobbies" style="display: none;">
+    <h2>Hobbies</h2>
+    <h3>Football</h3>
+    <p>Football, both playing and watching, holds a profound impact on my life. Playing soccer not only provides physical exercise but also fosters camaraderie and teamwork. The thrill of competition and the joy of scoring goals are unmatched. Watching Real Madrid adds another dimension, connecting me to a global community of passionate fans. It's more than just a sport; it's a cultural phenomenon that transcends borders and unites people from diverse backgrounds. Through victories and defeats, football teaches resilience and sportsmanship. It inspires dreams and fuels aspirations, reminding us of the power of dedication and the beauty of the beautiful game.</p>
+    <h3>Traveling</h3>
+    <p>Exploring diverse corners of the globe and immersing myself in varied cultures enriches my life profoundly. From the charming streets of France to the historic landscapes of the United Kingdom and the familiar grounds of Burundi, each destination offers unique insights into humanity's rich tapestry. Within the USA alone, I've traversed over 20 states, delving into their histories and appreciating their distinct identities. Every journey unfolds new perspectives, deepening my understanding of the world and fostering connections with people of diverse backgrounds. Traveling is not just a hobby; it's a transformative experience that continually broadens my horizons and enriches my soul.</p>
+</section>
+
+<section id="contact" style="display: none;">
+    <h2>Contact Me</h2>
+    <form action="#" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
